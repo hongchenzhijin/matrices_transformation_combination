@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1, h3 {
+    color: #0056b3;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.main-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.controls-panel {
+    flex: 1;
+    min-width: 350px;
+}
+
+.visualization-panel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.transformation-def {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.transformation-def h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.vector-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+#transformation-order-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.order-btn:hover {
+    background-color: #e2e6ea;
+}
+
+.order-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.order-btn.selected {
+    background-color: #28a745;
+    color: white;
+    border-color: #218838;
+}
+
+.order-btn.selected::after {
+    content: " (" attr(data-order) ")";
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#start-btn {
+    background-color: #007bff;
+}
+
+#reset-order-btn {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+#full-reset-btn {
+    background-color: #dc3545;
+}
+
+#canvas-container {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    height: 500px;
+    position: relative;
+}
+
+#canvas-container canvas {
+    display: block;
+}
+
+#info-panel {
+    padding: 15px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    min-height: 50px;
+}

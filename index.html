@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Transformation Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>Linear Transformation Visualizer</h1>
+
+        <div class="main-layout">
+            <!-- CONTROLS PANEL -->
+            <div class="controls-panel">
+                <h3>1. Setup Transformations</h3>
+                <div class="control-group">
+                    <label for="num-transformations">How many transformations?</label>
+                    <input type="number" id="num-transformations" min="1" max="26" value="1">
+                </div>
+                <div id="transformation-inputs-container">
+                    <!-- JS will populate this -->
+                </div>
+
+                <h3>2. Set Initial Vector</h3>
+                <div class="control-group">
+                    <label for="vector-x">Original Vector's End Point (x, y):</label>
+                    <div class="vector-inputs">
+                        <input type="number" id="vector-x" value="2">
+                        <input type="number" id="vector-y" value="1">
+                    </div>
+                </div>
+
+                <h3>3. Define Transformation Order</h3>
+                <p>Click the buttons below in the desired order.</p>
+                <div id="transformation-order-buttons">
+                    <!-- JS will populate this -->
+                </div>
+
+                <h3>4. Run & Reset</h3>
+                <div class="action-buttons">
+                    <button id="start-btn">Start Transformation</button>
+                    <button id="reset-order-btn">Reset Order</button>
+                    <button id="full-reset-btn">Full Reset</button>
+                </div>
+            </div>
+
+            <!-- VISUALIZATION PANEL -->
+            <div class="visualization-panel">
+                <div id="canvas-container"></div>
+                <div id="info-panel">
+                    Welcome! Set up your transformations and click 'Start'.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.1/math.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    
+    <!-- Local Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
